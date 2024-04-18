@@ -1,0 +1,26 @@
+Primer paso:
+
+Con un bucle mientras, recorremos la lista enlazada hasta que el elemento siguiente al actual sea nulo.
+Anidamos un bucle mientras dentro del anterior que recorra la lista enlazada a partir del siguiente elemento actual 
+hasta que el elemento siguiente al actual sea nulo, manteniendo una referencia al anterior del mismo. 
+Si el elemento actual del primer bucle es igual al elemento actual del segundo bucle, pasamos el elemento actual al siguiente, y
+hacemos que la referencia del siguiente al anterior sea el nuevo elemento actual.
+
+Segundo paso:
+
+COMIENZO
+    Mientras elemento.siguiente <> nulo
+        anterior <- elemento
+        elementoSiguiente <- elemento.siguiente
+        Mientras elementoSiguiente.siguiente <> nulo
+            Si elemento = elementoSiguiente
+                elementoSiguiente <- elementoSiguiente.siguiente
+                anterior.siguiente <- elementoSiguiente
+            Si no
+                anterior <- elementoSiguiente
+                elementoSiguiente <- elementoSiguiente.siguiente
+            Fin Si
+        Fin Mientras
+        elemento <- elemento.siguiente
+    Fin Mientras
+FIN

@@ -1,0 +1,11 @@
+UT2_PD1- Ejercicio 1
+miFuncion
+    desde i = 1 hasta n-1 hacer O(N)
+        desde j = N hasta i + 1 hacer O(N^2 )
+            si arreglo[J].clave < arreglo[j-1].clave entonces   O(1)
+                Intercambia(arreglo[j],arreglo[j-1])    O(1)
+            Fin si
+        Fin desde
+    Fin desde
+Fin
+Orden total: O(N^2)
